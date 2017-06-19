@@ -77,21 +77,15 @@ TeleopTwistJoy::TeleopTwistJoy(rclcpp::node::Node::SharedPtr & node)
 
   pimpl_->node = node;
 
-  rmw_qos_profile_t custom_qos_profile;
-  custom_qos_profile.history = RMW_QOS_POLICY_HISTORY_KEEP_LAST;
-  custom_qos_profile.depth = 50;
-  custom_qos_profile.reliability = RMW_QOS_POLICY_RELIABILITY_RELIABLE;
-  custom_qos_profile.durability = RMW_QOS_POLICY_DURABILITY_VOLATILE;
-
   pimpl_->cmd_vel_pub = node->create_publisher<geometry_msgs::msg::Twist>("cmd_vel",
-    custom_qos_profile);
+    rmw_qos_profile_sensor_data);
   pimpl_->joy_sub = node->create_subscription<sensor_msgs::msg::Joy>("joy",
     std::bind(&TeleopTwistJoy::Impl::joyCallback, this->pimpl_, std::placeholders::_1),
-    custom_qos_profile);
+    rmw_qos_profile_sensor_data);
 
   pimpl_->parameter_service = std::make_shared<rclcpp::parameter_service::ParameterService>(node);
 
-  pimpl_->enable_button = 0;
+  pimpl_->enable_button = 5;
   node->get_parameter("enable_button", pimpl_->enable_button);
 
   pimpl_->enable_turbo_button = -1;
@@ -107,7 +101,7 @@ TeleopTwistJoy::TeleopTwistJoy(rclcpp::node::Node::SharedPtr & node)
   // }
   // else
   {
-    pimpl_->axis_linear_map["x"] = 1;
+    pimpl_->axis_linear_map["x"] = 5;
     node->get_parameter("axis_linear", pimpl_->axis_linear_map["x"]);
     pimpl_->scale_linear_map["x"] = 0.5;
     node->get_parameter("scale_linear", pimpl_->scale_linear_map["x"]);
@@ -125,7 +119,7 @@ TeleopTwistJoy::TeleopTwistJoy(rclcpp::node::Node::SharedPtr & node)
   // }
   // else
   {
-    pimpl_->axis_angular_map["yaw"] = 0;
+    pimpl_->axis_angular_map["yaw"] = 2;
     node->get_parameter("axis_angular", pimpl_->axis_angular_map["yaw"]);
     pimpl_->scale_angular_map["yaw"] = 0.5;
     node->get_parameter("scale_angular", pimpl_->scale_angular_map["yaw"]);
