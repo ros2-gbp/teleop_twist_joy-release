@@ -1,0 +1,12 @@
+Source: ros-r2b3-teleop-twist-joy
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-r2b3-ament-cmake-ros, ros-r2b3-geometry-msgs, ros-r2b3-rclcpp, ros-r2b3-sensor-msgs, ros-r2b3-ros-workspace
+Homepage: http://wiki.ros.org/teleop_twist_joy
+Standards-Version: 3.9.2
+
+Package: ros-r2b3-teleop-twist-joy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-r2b3-geometry-msgs, ros-r2b3-rclcpp, ros-r2b3-sensor-msgs, ros-r2b3-ros-workspace
+Description: Generic joystick teleop for twist robots.
