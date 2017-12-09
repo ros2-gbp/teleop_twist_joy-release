@@ -18,7 +18,7 @@ tracks:
     patches: null
     release_inc: '5'
     release_repo_url: git@github.com:ros2-gbp/teleop_twist_joy-release
-    release_tag: ros2
+    release_tag: 2.0.0
     ros_distro: ardent
     vcs_type: git
     vcs_uri: https://github.com/ros2/teleop_twist_joy.git
