@@ -1,0 +1,12 @@
+Source: ros-bouncy-teleop-twist-joy
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake-ros, ros-bouncy-geometry-msgs, ros-bouncy-rclcpp, ros-bouncy-sensor-msgs, ros-bouncy-ros-workspace
+Homepage: http://wiki.ros.org/teleop_twist_joy
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-teleop-twist-joy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-geometry-msgs, ros-bouncy-rclcpp, ros-bouncy-sensor-msgs, ros-bouncy-ros-workspace
+Description: Generic joystick teleop for twist robots.

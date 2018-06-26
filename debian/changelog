@@ -1,0 +1,43 @@
+ros-bouncy-teleop-twist-joy (2.0.1-0bionic) bionic; urgency=high
+
+  * ParameterService auto started (#7 <https://github.com/ros2/teleop_twist_joy/issues/7>)
+  * Contributors: Shane Loretz
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Tue, 26 Jun 2018 00:00:00 -0000
+
+ros-bouncy-teleop-twist-joy (2.0.0-0bionic) bionic; urgency=high
+
+  * Initial port to ROS2
+  * Contributors: Chris Lalancette, Mikael Arguedas, Deanna Hood
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Fri, 08 Dec 2017 00:00:00 -0000
+
+ros-bouncy-teleop-twist-joy (0.1.2-0bionic) bionic; urgency=high
+
+  * Fixed incorrect key. (#21 <https://github.com/ros-teleop/teleop_twist_joy/issues/21>)
+  * Allow custom config file from location outside of this package
+  * Setting scale_angular_turbo if axis_angular is set so that turning works when turbo is pressed.
+  * Added turbo scale for angular velocities and accompanying test.
+  * Add LICENSE.txt.
+  * Contributors: Daniel Aden, Isaac I.Y. Saito, Mike Purvis, Tony Baltovski
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Wed, 31 Aug 2016 00:00:00 -0000
+
+ros-bouncy-teleop-twist-joy (0.1.1-0bionic) bionic; urgency=high
+
+  * Add rostests.
+  * Added maps to allow multi-dof velocity publishing.
+  * Added Xbox 360 controller example.
+  * Contributors: Mike Purvis, Tony Baltovski
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Sat, 27 Jun 2015 00:00:00 -0000
+
+ros-bouncy-teleop-twist-joy (0.1.0-0bionic) bionic; urgency=high
+
+  * Added configurations for Logitech Attack3 and Extreme 3D Pro joysticks.
+  * Initial version, with example config for PS3 joystick.
+  * Contributors: Mike Purvis, Tony Baltovski
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Fri, 25 Jul 2014 00:00:00 -0000
+
+
