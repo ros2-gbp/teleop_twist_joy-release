@@ -1,0 +1,12 @@
+Source: ros-crystal-teleop-twist-joy
+Section: misc
+Priority: extra
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-crystal-ament-cmake-ros, ros-crystal-geometry-msgs, ros-crystal-rclcpp, ros-crystal-sensor-msgs, ros-crystal-ros-workspace
+Homepage: http://wiki.ros.org/teleop_twist_joy
+Standards-Version: 3.9.2
+
+Package: ros-crystal-teleop-twist-joy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-crystal-geometry-msgs, ros-crystal-rclcpp, ros-crystal-sensor-msgs, ros-crystal-ros-workspace
+Description: Generic joystick teleop for twist robots.
