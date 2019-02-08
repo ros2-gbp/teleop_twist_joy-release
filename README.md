@@ -1,3 +1,26 @@
+## teleop_twist_joy (crystal) - 2.1.1-0
+
+The packages in the `teleop_twist_joy` repository were released into the `crystal` distro by running `/usr/bin/bloom-release --rosdistro crystal --track crystal teleop_twist_joy` on `Fri, 08 Feb 2019 21:09:17 -0000`
+
+The `teleop_twist_joy` package was released.
+
+Version of package(s) in repository `teleop_twist_joy`:
+
+- upstream repository: https://github.com/ros2/teleop_twist_joy.git
+- release repository: https://github.com/ros2-gbp/teleop_twist_joy-release.git
+- rosdistro version: `2.1.0-0`
+- old version: `2.1.0-0`
+- new version: `2.1.1-0`
+
+Versions of tools used:
+
+- bloom version: `0.7.2`
+- catkin_pkg version: `0.4.10`
+- rosdep version: `0.15.0`
+- rosdistro version: `0.7.2`
+- vcstools version: `0.1.40`
+
+
 ## teleop_twist_joy (crystal) - 2.1.0-0
 
 The packages in the `teleop_twist_joy` repository were released into the `crystal` distro by running `/usr/bin/bloom-release --rosdistro crystal --track crystal teleop_twist_joy` on `Fri, 07 Dec 2018 21:59:38 -0000`
