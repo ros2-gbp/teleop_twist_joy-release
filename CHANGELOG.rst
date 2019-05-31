@@ -2,6 +2,11 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.0 (2019-05-31)
+------------------
+* Fix parameters so things actually work in Dashing. (`#9 <https://github.com/ros2/teleop_twist_joy/issues/9>`_)
+* Contributors: Chris Lalancette
+
 2.1.1 (2019-02-08)
 ------------------
 * Add in the ability to control via parameters (`#8 <https://github.com/ros2/teleop_twist_joy/issues/8>`_)
