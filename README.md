@@ -1,3 +1,26 @@
+## teleop_twist_joy (eloquent) - 2.2.2-1
+
+The packages in the `teleop_twist_joy` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -r eloquent teleop_twist_joy --track eloquent` on `Thu, 24 Oct 2019 00:34:51 -0000`
+
+The `teleop_twist_joy` package was released.
+
+Version of package(s) in repository `teleop_twist_joy`:
+
+- upstream repository: https://github.com/ros2/teleop_twist_joy.git
+- release repository: https://github.com/ros2-gbp/teleop_twist_joy-release.git
+- rosdistro version: `2.2.1-1`
+- old version: `2.2.1-1`
+- new version: `2.2.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## teleop_twist_joy (eloquent) - 2.2.1-1
 
 The packages in the `teleop_twist_joy` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --track eloquent --rosdistro eloquent teleop_twist_joy` on `Fri, 27 Sep 2019 12:33:18 -0000`
