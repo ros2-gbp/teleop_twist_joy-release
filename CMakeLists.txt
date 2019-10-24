@@ -14,17 +14,27 @@ find_package(ament_cmake REQUIRED)
 
 find_package(geometry_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 include_directories(include)
 
-add_library(${PROJECT_NAME} src/${PROJECT_NAME})
+add_library(${PROJECT_NAME} SHARED src/${PROJECT_NAME})
+
+include(GenerateExportHeader)
+generate_export_header(${PROJECT_NAME} EXPORT_FILE_NAME ${PROJECT_NAME}/${PROJECT_NAME}_export.h)
+target_include_directories(${PROJECT_NAME} PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>")
+set_target_properties(${PROJECT_NAME} PROPERTIES EXPORT_HEADER_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
 ament_target_dependencies(${PROJECT_NAME}
   "geometry_msgs"
   "rclcpp"
+  "rclcpp_components"
   "sensor_msgs"
 )
+
+rclcpp_components_register_nodes(${PROJECT_NAME}
+  "teleop_twist_joy::TeleopTwistJoy")
 
 add_executable(${PROJECT_NAME}_node src/teleop_node.cpp)
 target_link_libraries(${PROJECT_NAME}_node ${PROJECT_NAME})
@@ -39,35 +49,45 @@ install(TARGETS ${PROJECT_NAME}
 install(TARGETS ${PROJECT_NAME}_node
   DESTINATION lib/${PROJECT_NAME})
 
-install(DIRECTORY include/${PROJECT_NAME}/
+install(DIRECTORY include/
   DESTINATION include)
 
-#install(DIRECTORY launch config
-#  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/${PROJECT_NAME}_export.h
+  DESTINATION include/${PROJECT_NAME})
+
+install(DIRECTORY launch config
+  DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
-  # find_package(roslint REQUIRED)
-  # roslint_cpp()
-  # roslint_python()
-  # roslint_add_test()
+  # Disable some broken tests for now
+  set(ament_cmake_copyright_FOUND TRUE)
+  set(ament_cmake_cpplint_FOUND TRUE)
+  set(ament_cmake_uncrustify_FOUND TRUE)
 
-  # find_package(roslaunch REQUIRED)
-  # roslaunch_add_file_check(launch/teleop.launch)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
 
-  # find_package(rostest REQUIRED)
-  # include_directories(include ${catkin_INCLUDE_DIRS})
+  set(_teleop_twist_joy_launch_tests
+    # Check axes and scaling.
+    test/differential_joy_launch_test.py
+    test/holonomic_joy_launch_test.py
+    test/six_dof_joy_launch_test.py
 
-  # # Check axes and scaling.
-  # add_rostest(test/differential_joy.test)
-  # add_rostest(test/holonomic_joy.test)
-  # add_rostest(test/six_dof_joy.test)
+    # Check enable and turbo button logic.
+    test/no_enable_joy_launch_test.py
+    test/turbo_enable_joy_launch_test.py
+    test/only_turbo_joy_launch_test.py
+    test/turbo_angular_enable_joy_launch_test.py
+  )
 
-  # # Check enable and turbo button logic.
-  # add_rostest(test/no_enable_joy.test)
-  # add_rostest(test/turbo_enable_joy.test)
-  # add_rostest(test/only_turbo_joy.test)
-  # add_rostest(test/turbo_angular_enable_joy.test)
-  # add_rostest(test/turbo_angular_enable_joy_with_rosparam_map.test)
+  find_package(launch_testing_ament_cmake REQUIRED)
+  foreach(_test_path ${_teleop_twist_joy_launch_tests})
+    add_launch_test(${_test_path}
+      APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_SOURCE_DIR}/test
+      TIMEOUT 10
+    )
+  endforeach()
 endif()
 
 ament_export_include_directories(include)
