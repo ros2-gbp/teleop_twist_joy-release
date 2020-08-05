@@ -1,3 +1,26 @@
+## teleop_twist_joy (rolling) - 2.3.0-1
+
+The packages in the `teleop_twist_joy` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling teleop_twist_joy` on `Wed, 05 Aug 2020 18:52:07 -0000`
+
+The `teleop_twist_joy` package was released.
+
+Version of package(s) in repository `teleop_twist_joy`:
+
+- upstream repository: https://github.com/ros2/teleop_twist_joy.git
+- release repository: https://github.com/ros2-gbp/teleop_twist_joy-release.git
+- rosdistro version: `2.2.2-2`
+- old version: `2.2.2-2`
+- new version: `2.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## teleop_twist_joy (foxy) - 2.2.2-1
 
 The packages in the `teleop_twist_joy` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy teleop_twist_joy` on `Tue, 12 May 2020 16:46:01 -0000`
