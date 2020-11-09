@@ -1,6 +1,6 @@
 import launch
-import launch_ros
 import launch_ros.actions
+import launch_testing
 
 import pytest
 
@@ -8,10 +8,10 @@ import test_joy_twist
 
 
 @pytest.mark.rostest
-def generate_test_description(ready_fn):
+def generate_test_description():
     teleop_node = launch_ros.actions.Node(
         package='teleop_twist_joy',
-        node_executable='teleop_node',
+        executable='teleop_node',
         parameters=[{
             'axis_linear.x': 1,
             'axis_linear.y': 2,
@@ -29,12 +29,10 @@ def generate_test_description(ready_fn):
         }],
     )
 
-    return (
-        launch.LaunchDescription([
+    return launch.LaunchDescription([
             teleop_node,
-            launch.actions.OpaqueFunction(function=lambda context: ready_fn()),
+            launch_testing.actions.ReadyToTest(),
         ]), locals()
-    )
 
 
 class SixDofJoy(test_joy_twist.TestJoyTwist):
