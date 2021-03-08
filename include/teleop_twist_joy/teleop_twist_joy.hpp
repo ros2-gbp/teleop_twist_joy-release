@@ -44,7 +44,6 @@ public:
 private:
   struct Impl;
   Impl* pimpl_;
-  OnSetParametersCallbackHandle::SharedPtr callback_handle;  
 };
 
 }  // namespace teleop_twist_joy
