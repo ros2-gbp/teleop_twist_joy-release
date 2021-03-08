@@ -27,13 +27,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
 #include <rclcpp/rclcpp.hpp>
 
-#include "teleop_twist_joy/teleop_twist_joy.h"
+#include "teleop_twist_joy/teleop_twist_joy.hpp"
 
 int main(int argc, char *argv[])
 {
   rclcpp::init(argc, argv);
 
-  rclcpp::spin(std::make_unique<teleop_twist_joy::TeleopTwistJoy>());
+  rclcpp::spin(std::make_unique<teleop_twist_joy::TeleopTwistJoy>(rclcpp::NodeOptions()));
 
   rclcpp::shutdown();
 
