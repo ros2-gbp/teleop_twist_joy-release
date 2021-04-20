@@ -1,1 +1,1 @@
-{"base": "acd6335", "parent": "debian/rolling/teleop_twist_joy", "previous": "6d80125", "trim": "", "trimbase": ""}
+{"base": "a22e69a", "parent": "debian/galactic/teleop_twist_joy", "previous": "734ddb5", "trim": "", "trimbase": ""}
