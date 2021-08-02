@@ -1,0 +1,12 @@
+Source: ros-foxy-teleop-twist-joy
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ament-lint-auto, ros-foxy-ament-lint-common, ros-foxy-geometry-msgs, ros-foxy-launch-ros, ros-foxy-launch-testing-ament-cmake, ros-foxy-launch-testing-ros, ros-foxy-rclcpp, ros-foxy-rclcpp-components, ros-foxy-sensor-msgs, ros-foxy-ros-workspace
+Homepage: http://wiki.ros.org/teleop_twist_joy
+Standards-Version: 3.9.2
+
+Package: ros-foxy-teleop-twist-joy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-geometry-msgs, ros-foxy-joy, ros-foxy-rclcpp, ros-foxy-rclcpp-components, ros-foxy-sensor-msgs, ros-foxy-ros-workspace
+Description: Generic joystick teleop for twist robots.
