@@ -2,11 +2,15 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.4 (2023-06-07)
+2.5.0 (2023-06-07)
 ------------------
+* [rolling] Update maintainers - 2022-11-07 (`#33 <https://github.com/ros2/teleop_twist_joy/issues/33>`_)
+* Enable uncrustify and cpplint.
+* Cleanup CMakeLists.txt.
+* Remove checking of types from parameter_callback.
 * Install includes to include/${PROJECT_NAME} (`#30 <https://github.com/ros2/teleop_twist_joy/issues/30>`_)
 * joy_vel argument (`#29 <https://github.com/ros2/teleop_twist_joy/issues/29>`_)
-* Contributors: Raffaello Bonghi, Shane Loretz
+* Contributors: Audrow Nash, Chris Lalancette, Raffaello Bonghi, Shane Loretz
 
 2.4.3 (2021-08-02)
 ------------------
