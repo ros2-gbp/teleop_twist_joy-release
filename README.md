@@ -1,3 +1,26 @@
+## teleop_twist_joy (iron) - 2.5.0-1
+
+The packages in the `teleop_twist_joy` repository were released into the `iron` distro by running `/usr/bin/bloom-release --track iron --rosdistro iron teleop_twist_joy` on `Wed, 07 Jun 2023 12:02:14 -0000`
+
+The `teleop_twist_joy` package was released.
+
+Version of package(s) in repository `teleop_twist_joy`:
+
+- upstream repository: https://github.com/ros2/teleop_twist_joy.git
+- release repository: https://github.com/ros2-gbp/teleop_twist_joy-release.git
+- rosdistro version: `2.4.3-5`
+- old version: `2.4.3-5`
+- new version: `2.5.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## teleop_twist_joy (humble) - 2.4.4-1
 
 The packages in the `teleop_twist_joy` repository were released into the `humble` distro by running `/usr/bin/bloom-release --track humble --rosdistro humble teleop_twist_joy` on `Wed, 07 Jun 2023 11:55:10 -0000`
