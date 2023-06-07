@@ -24,7 +24,7 @@ The package comes with the `teleop_node` that republishes `sensor_msgs/msg/Joy` 
 
 - `enable_button (int, default: 0)`
   - Joystick button to enable regular-speed movement.
-  
+
 - `enable_turbo_button (int, default: -1)`
   - Joystick button to enable high-speed movement (disabled when -1).
 
@@ -51,21 +51,22 @@ The package comes with the `teleop_node` that republishes `sensor_msgs/msg/Joy` 
   - `axis_angular.yaw (int, default: 2)`
   - `axis_angular.pitch (int, default: -1)`
   - `axis_angular.roll (int, default: -1)`
-  
+
 - `scale_angular.<axis>`
   - Scale to apply to joystick angular axis.
   - `scale_angular.yaw (double, default: 0.5)`
   - `scale_angular.pitch (double, default: 0.0)`
   - `scale_angular.roll (double, default: 0.0)`
-  
+
 - `scale_angular_turbo.<axis>`
   - Scale to apply to joystick angular axis for high-speed movement.
   - `scale_angular_turbo.yaw (double, default: 1.0)`
   - `scale_angular_turbo.pitch (double, default: 0.0)`
   - `scale_angular_turbo.roll (double, default: 0.0)`
-    
 
-  
+- `inverted_reverse (bool, default: false)`
+  - Whether to invert turning left-right while reversing (useful for differential wheeled robots).
+
 
 
 # Usage
