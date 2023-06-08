@@ -2,16 +2,16 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.6.0 (2023-06-07)
+2.4.5 (2023-06-08)
 ------------------
-* add inverted reverse param (`#35 <https://github.com/ros2/teleop_twist_joy/issues/35>`_)
-* [rolling] Update maintainers - 2022-11-07 (`#33 <https://github.com/ros2/teleop_twist_joy/issues/33>`_)
-* Enable uncrustify and cpplint.
-* Cleanup CMakeLists.txt.
-* Remove checking of types from parameter_callback.
+* Cleanup CMakeLists.txt. (`#36 <https://github.com/ros2/teleop_twist_joy/issues/36>`_)
+* Contributors: Chris Lalancette
+
+2.4.4 (2023-06-07)
+------------------
 * Install includes to include/${PROJECT_NAME} (`#30 <https://github.com/ros2/teleop_twist_joy/issues/30>`_)
 * joy_vel argument (`#29 <https://github.com/ros2/teleop_twist_joy/issues/29>`_)
-* Contributors: Audrow Nash, Chris Lalancette, Máté, Raffaello Bonghi, Shane Loretz
+* Contributors: Raffaello Bonghi, Shane Loretz
 
 2.4.3 (2021-08-02)
 ------------------
