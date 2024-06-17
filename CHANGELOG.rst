@@ -2,6 +2,14 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.6.1 (2024-06-17)
+------------------
+* Added Github action (`#48 <https://github.com/ros2/teleop_twist_joy/issues/48>`_)
+* Add an option to publish TwistStamped (`#42 <https://github.com/ros2/teleop_twist_joy/issues/42>`_)
+* Add support for PDP joysticks (`#41 <https://github.com/ros2/teleop_twist_joy/issues/41>`_)
+  * Add support for PDP joysticks
+* Contributors: Alejandro Hernández Cordero, Bonolo Mathibela, Tamaki Nishino
+
 2.6.0 (2023-06-07)
 ------------------
 * add inverted reverse param (`#35 <https://github.com/ros2/teleop_twist_joy/issues/35>`_)
