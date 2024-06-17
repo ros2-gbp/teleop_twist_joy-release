@@ -1,5 +1,5 @@
 ros2/teleop_twist_joy
-================
+=====================
 
 # Overview
 The purpose of this package is to provide a generic facility for tele-operating Twist-based ROS2 robots with a standard joystick.
@@ -73,7 +73,6 @@ The message type can be changed to `geometry_msgs/msg/TwistStamped` by the `publ
 
 - `frame (string, default: 'teleop_twist_joy')`
   - Frame name used for the header of TwistStamped messages.
-
 
 # Usage
 

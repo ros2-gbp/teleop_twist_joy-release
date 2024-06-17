@@ -2,41 +2,32 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.4.6 (2024-06-17)
+2.5.1 (2024-06-17)
 ------------------
-* add inverted reverse param (`#35 <https://github.com/ros2/teleop_twist_joy/issues/35>`_) (`#43 <https://github.com/ros2/teleop_twist_joy/issues/43>`_)
-  * add inverted-reverse param
-  (cherry picked from commit 2a5f3e4f776869ae1e981f3ca1877cdf10318f37)
-  # Conflicts:
-  #	src/teleop_twist_joy.cpp
-  Co-authored-by: Máté <56221639+turtlewizard73@users.noreply.github.com>
-  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
-* Add an option to publish TwistStamped (backport `#42 <https://github.com/ros2/teleop_twist_joy/issues/42>`_) (`#45 <https://github.com/ros2/teleop_twist_joy/issues/45>`_)
-  * Add an option to publish TwistStamped (`#42 <https://github.com/ros2/teleop_twist_joy/issues/42>`_)
+* Add an option to publish TwistStamped (`#42 <https://github.com/ros2/teleop_twist_joy/issues/42>`_) (`#46 <https://github.com/ros2/teleop_twist_joy/issues/46>`_)
   (cherry picked from commit 76cd6508a8c4e35d9fe3a6a8968abbe7159ffc08)
   # Conflicts:
   #	README.md
   #	src/teleop_twist_joy.cpp
-  * resolved merge conflicts (`#47 <https://github.com/ros2/teleop_twist_joy/issues/47>`_)
-  Co-authored-by: Yannic Bachmann <yannic.bachmann@maha.de>
-  ---------
   Co-authored-by: Tamaki Nishino <otamachan@gmail.com>
-  Co-authored-by: Yannic Bachmann <76436302+YBachmann@users.noreply.github.com>
-  Co-authored-by: Yannic Bachmann <yannic.bachmann@maha.de>
   Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
-* Added Humble CI (`#50 <https://github.com/ros2/teleop_twist_joy/issues/50>`_)
+* add inverted reverse param (`#35 <https://github.com/ros2/teleop_twist_joy/issues/35>`_) (`#44 <https://github.com/ros2/teleop_twist_joy/issues/44>`_)
+  * add inverted-reverse param
+  (cherry picked from commit 2a5f3e4f776869ae1e981f3ca1877cdf10318f37)
+  Co-authored-by: Máté <56221639+turtlewizard73@users.noreply.github.com>
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+* Added Iron CI (`#49 <https://github.com/ros2/teleop_twist_joy/issues/49>`_)
 * Contributors: Alejandro Hernández Cordero, mergify[bot]
 
-2.4.5 (2023-06-08)
+2.5.0 (2023-06-07)
 ------------------
-* Cleanup CMakeLists.txt. (`#36 <https://github.com/ros2/teleop_twist_joy/issues/36>`_)
-* Contributors: Chris Lalancette
-
-2.4.4 (2023-06-07)
-------------------
+* [rolling] Update maintainers - 2022-11-07 (`#33 <https://github.com/ros2/teleop_twist_joy/issues/33>`_)
+* Enable uncrustify and cpplint.
+* Cleanup CMakeLists.txt.
+* Remove checking of types from parameter_callback.
 * Install includes to include/${PROJECT_NAME} (`#30 <https://github.com/ros2/teleop_twist_joy/issues/30>`_)
 * joy_vel argument (`#29 <https://github.com/ros2/teleop_twist_joy/issues/29>`_)
-* Contributors: Raffaello Bonghi, Shane Loretz
+* Contributors: Audrow Nash, Chris Lalancette, Raffaello Bonghi, Shane Loretz
 
 2.4.3 (2021-08-02)
 ------------------
