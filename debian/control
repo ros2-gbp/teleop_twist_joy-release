@@ -1,0 +1,12 @@
+Source: ros-humble-teleop-twist-joy
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-geometry-msgs, ros-humble-launch-ros <!nocheck>, ros-humble-launch-testing-ament-cmake <!nocheck>, ros-humble-launch-testing-ros <!nocheck>, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Homepage: http://wiki.ros.org/teleop_twist_joy
+Standards-Version: 3.9.2
+
+Package: ros-humble-teleop-twist-joy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-geometry-msgs, ros-humble-joy, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Description: Generic joystick teleop for twist robots.
