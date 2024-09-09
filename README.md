@@ -75,7 +75,6 @@ The message type can be changed to `geometry_msgs/msg/TwistStamped` by the `publ
 - `frame (string, default: 'teleop_twist_joy')`
   - Frame name used for the header of TwistStamped messages.
 
-
 # Usage
 
 ## Install
@@ -84,7 +83,7 @@ For most users building from source will not be required, execute `apt-get insta
 ## Run
 A launch file has been provided which has three arguments which can be changed in the terminal or via your own launch file.
 To configure the node to match your joystick a config file can be used.
-There are several common ones provided in this package (atk3, ps3-holonomic, ps3, xbox, xd3), located here: https://github.com/ros2/teleop_twist_joy/tree/rolling/config.
+There are several common ones provided in this package (atk3, ps3-holonomic, ps3, xbox, xd3), located here: https://github.com/ros2/teleop_twist_joy/tree/iron/config.
 
 PS3 is default, to run for another config (e.g. xbox) use this:
 ````
